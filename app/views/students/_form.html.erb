@@ -1,0 +1,15 @@
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <i class="fa fa-pencil-square-o" aria-hidden="true"></i><b> <%= params[:action].capitalize %> </b>
+  </div>
+  <div class="panel-body">
+    <%= f.input :name %>
+    <%= f.input :roll_number %>
+    <%= f.input :dob, as: :string, input_html: {class: 'jquery_date'} %>
+    <%= f.input :gender, as: :radio_buttons, collection: Student::GENDER,
+                wrapper: :horizontal_radio_and_checkboxes %>
+    <%= f.input :contact_number, input_html: {maxlength: 10 } %>
+    <%= f.submit submit_btn_text , class: 'btn btn-primary submit-button' %>
+  </div>
+</div>
+

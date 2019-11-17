@@ -1,0 +1,5 @@
+<tr>
+    <td><%=link_to subject.name, edit_subject_path(subject), {data: {toggle: "tooltip", title: "edit"} } %></td>
+    <td><%= subject.code %></td>
+    <td><%= subject.teacher.username %></td>
+</tr>

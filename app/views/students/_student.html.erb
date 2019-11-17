@@ -1,0 +1,18 @@
+<tr>
+  <% if current_user.is_admin? %>
+  		<td><%=link_to student.name, edit_student_path(student), data: {toggle: "tooltip", title: "edit"} %></td>
+  <%else%>
+  	<td><%= student.name %></td>
+  <%end%>	
+  <td><%= student.roll_number %></td>
+  <td><%= student.dob.strftime('%d-%m-%Y') %></td>
+  <td><%= student.gender == 'M' ? 'Male' : 'Female' %></td>
+  <td><%= student.contact_number %></td>
+  <% if current_user.is_admin? %>
+  		<td></td>
+  <%else%>
+  		<td style="text-align: center;"> <%= link_to(image_tag("list", 
+        {alt: "", align: "middle", border: "0", size: "20x20" }) + "", 'javascript:void(0);', data: { toggle: "tooltip", title: 'Subject Marks', url: link_marks_students_path(id: student.id)}, class: 'js_load_modal_popup') %></td>
+  <%end%>	
+   
+</tr>

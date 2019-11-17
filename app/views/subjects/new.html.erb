@@ -1,0 +1,8 @@
+ <% title = t('common.new',model_name: Subject.model_name.human) %>
+
+<%= render partial: 'shared/display_title_btns', locals: {title: title, back: true} %>
+
+<%= simple_form_for @subject, wrapper: :horizontal_form, html: {autocomplete: "off", :class => 'form-horizontal custom-form' } do |f| %>
+	<%= render partial: 'form', locals: {f: f} %>
+<% end %>
+

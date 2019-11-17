@@ -1,0 +1,7 @@
+<% title = t('common.listing_page',model_name: Student.model_name.human.pluralize) %>
+
+<%= render partial: 'shared/display_title_btns', locals: {title: title, new: true} %>
+
+<div id="<%= params[:controller]%>_div">
+  <%= render 'list' %>
+</div>

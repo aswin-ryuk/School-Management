@@ -1,0 +1,11 @@
+<div class='table-responsive'>
+  <table class="table table-bordered table-hover table-condensed custom-table">
+    <thead >
+      <%= render 'shared/list_headers', header: 'subjects_list_columns' %>
+    </thead>  
+    <tbody>
+      <%= render @subjects %>
+    </tbody>
+  </table>
+</div>
+<%= render partial: 'shared/pagination', locals: {list_object: @subjects} %>

@@ -1,0 +1,15 @@
+<div id="add_errors">	
+</div>
+<%= simple_form_for(student, url: save_marks_students_path, method: :post,:remote => true) do |form| %> 
+	
+	<%= form.input :id, as: :hidden, value: student.id %> 
+	<%= form.simple_fields_for(:marks) do |mark| %> 
+		<% unless mark.object.new_record? %>
+			<%= mark.input :id, as: :hidden %> 
+		<% end %>
+		<%= mark.association :student, as: :hidden %> 
+		<%= mark.association :subject, as: :hidden %> 
+		<%= mark.input :subject_mark ,  as: :integer , label: "#{get_subject_name(mark)}", input_html: { readonly: get_access(mark) } %>
+	<% end %> 
+<%= form.submit "save", class: 'btn btn-primary'  %>
+<% end %>

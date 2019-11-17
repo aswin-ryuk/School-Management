@@ -1,0 +1,21 @@
+
+<%= render partial: 'shared/display_title_btns', locals: {title: 'Students Rank'} %>
+
+<div class='table-responsive'>
+  <table class="table table-bordered table-hover table-condensed custom-table">
+    <thead >
+      <th> Student Name</th>
+      <th> Total Marks</th>
+      <th> Rank </th>
+    </thead>  
+    <tbody>
+      <% @students.rows.each do |student| %>
+      	<tr> 
+      	<td> <%= student.first %></td>
+      	<td> <%= student.second %></td>
+      	<td> <%= student.last %></td>
+      	</tr>
+      <%end%>
+    </tbody>
+  </table>
+</div>
