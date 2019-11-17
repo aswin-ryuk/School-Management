@@ -22,7 +22,4 @@
 //= require turbolinks
 //= require bootbox
 //= require custom
-//= require chartkick
-//= require highcharts
-//= require highcharts-3d
 //= require_tree .

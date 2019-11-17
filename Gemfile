@@ -14,8 +14,6 @@ gem 'pg'
 #gem 'ruby-oci8'
 #gem 'ruby-oci8', '~> 2.2', '>= 2.2.7'
 #gem 'activerecord-oracle_enhanced-adapter', '~> 5.2'
-#gem 'activerecord-oracle_enhanced-adapter', '~> 1.6', '>= 1.6.7'
-#gem 'activerecord-oracle_enhanced-adapter'
 #gem 'activerecord', '~> 5.0', '>= 5.2.3'
 #gem 'activesupport', '~> 5.2', '>= 5.2.3'
 # Use Puma as the app server
@@ -79,6 +77,3 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'prawn', '~> 2.1'
 gem 'prawn-table', '~> 0.2.2'
-
- gem 'chartkick', '2.2.5'
- gem 'highcharts_rails'

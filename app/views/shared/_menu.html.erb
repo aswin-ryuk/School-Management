@@ -33,7 +33,9 @@
       <%= link_to '<i class="fa fa-sign-in" aria-hidden="true"></i>Create New User '.html_safe, new_user_registration_path, class: "btn btn-warning" %>&nbsp;|&nbsp;
       <%#= link_to '<i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit profile'.html_safe, edit_user_registration_path, class: "btn btn-warning" %>
     <% end %>
+    <% if user_signed_in? %>
       <%= link_to '<i class="fa fa-sign-out" aria-hidden="true"></i> Logout'.html_safe, destroy_user_session_path, method: :delete, class: " btn btn-danger" %>
+    <% end %>
   </ul>
 </nav>
 <br>
